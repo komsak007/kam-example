@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "projects": {
+    "pricing-sample-backend": "apps/pricing-sample-backend",
+    "pricing-sample-frontend": "apps/pricing-sample-frontend",
+    "shared-helpers": "libs/shared-helpers",
+    "shared-models": "libs/shared-models",
+    "shared-mongo-lib": "libs/shared-mongo-lib",
+    "shared-services": "libs/shared-services"
+  }
+}

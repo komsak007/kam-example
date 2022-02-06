@@ -1,0 +1,51 @@
+<div>
+  <div>TODO APP</div>
+  <div class="product-result">
+    <div *ngIf="errorMessage" style="color: red">{{ errorMessage }}</div>
+
+    <!--
+    <div *ngFor="let todoValue of tododes" (click)="deleteTodo(todoValue.id)">
+      {{ todoValue.id }}
+      {{ todoValue.todo }}
+    </div>
+    </ng-container> -->
+
+    <table>
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Todo</th>
+          <th>Delete</th>
+          <th>Update</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let todoValue of tododes">
+          <td>{{ todoValue.id }}</td>
+          <td>{{ todoValue.todo }}</td>
+          <td><button (click)="deleteTodo(todoValue.id)">Delete</button></td>
+          <td>
+            <button (click)="updateTodo(todoValue.id)">Update</button>
+          </td>
+          <!-- <td>
+            <input name="todo" [(ngModel)]="todo" />
+            <button (click)="updateTodo(todoValue.id)">Update</button>
+            <input
+              type="button"
+              (click)="updateTodo(todoValue.id)"
+              value="Edit"
+              class="btn btn-success me-2"
+            />
+          </td> -->
+        </tr>
+      </tbody>
+    </table>
+    <!-- <ng-container *ngIf="tododes">
+      <textarea rows="20"> {{ tododes | json }} </textarea>
+    </ng-container> -->
+  </div>
+  <div>
+    <input name="todo" [(ngModel)]="todo" />
+    <button (click)="addTodo()">Add</button>
+  </div>
+</div>

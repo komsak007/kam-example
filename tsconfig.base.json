@@ -1,0 +1,29 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": false,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2017", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@pricing-sample-nx/shared-helpers": ["libs/shared-helpers/src/index.ts"],
+      "@pricing-sample-nx/shared-models": ["libs/shared-models/src/index.ts"],
+      "@pricing-sample-nx/shared-mongo-lib": [
+        "libs/shared-mongo-lib/src/index.ts"
+      ],
+      "@pricing-sample-nx/shared-services": [
+        "libs/shared-services/src/index.ts"
+      ]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}

@@ -1,0 +1,41 @@
+<div class="pricing-sample-container">
+  <div class="head">
+    <div>
+      <h3>Pricing Sample</h3>
+    </div>
+    <button (click)="backToPreviousRoute()">Back</button>
+  </div>
+  <div class="content">
+    <div class="input-group">
+      <div class="form-input">
+        <label> PID</label>
+        <input [(ngModel)]="productID" (keyup.enter)="getProduct()" />
+      </div>
+      <div class="form-input">
+        <label> Quantity</label>
+        <input [(ngModel)]="quantity" (keyup.enter)="getProduct()" />
+      </div>
+      <div class="form-input">
+        <label> Coupon</label>
+        <input [(ngModel)]="coupon" (keyup.enter)="getProduct()" />
+      </div>
+      <button class="submit-button" (click)="getProduct()">Find</button>
+    </div>
+
+    <div class="product-result">
+      <div *ngIf="errorMessage" style="color: red">{{ errorMessage }}</div>
+      <ng-container *ngIf="product">
+        <textarea rows="20"> {{ product | json }} </textarea>
+      </ng-container>
+    </div>
+  </div>
+
+  <div>
+    <pricing-sample-nx-add-product></pricing-sample-nx-add-product>
+  </div>
+</div>
+
+<!-- getSample
+<ng-container *ngIf="value">
+  {{ value | json }}
+</ng-container> -->

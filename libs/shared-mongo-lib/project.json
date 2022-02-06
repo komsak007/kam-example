@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/shared-mongo-lib",
+  "sourceRoot": "libs/shared-mongo-lib/src",
+  "prefix": "pricing-sample-nx",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/shared-mongo-lib"],
+      "options": {
+        "jestConfig": "libs/shared-mongo-lib/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/shared-mongo-lib/src/**/*.ts",
+          "libs/shared-mongo-lib/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

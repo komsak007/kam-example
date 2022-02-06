@@ -1,0 +1,17 @@
+{
+  "files.exclude": {
+    "**/node_modules":true,
+    "**/dist":true,
+    "**/.gitignore": true,
+    "**/.prettier*": false,
+    "**/.eslint*": false,
+    "**/jest.*": false,
+    "**/tslint.*": false,
+    "**/tsconfig.*": false,
+    "**/tsconfig.*.*": false,
+    "nx.json": false,
+    "angular.json": false,
+    "docker-compose.yml": true,
+    "**/.gitkeep":true
+  }
+}
